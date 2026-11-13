@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>املا‌خوان فارسی پنجم دبستان | طراح منوچهر کریمی</title>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<img class="logo" src="assets/icon.svg" alt="آیکون املا‌خوان">
+<div><h1>📚 املا‌خوان صوتی فارسی پنجم دبستان</h1>
+<p>۱۵ درس (بدون درس‌های آزاد) • املای صوتی • تصحیح خودکار • نمره • تخته هوشمند — خط فارسی معیار</p></div>
+<div class="designer">✍️ طراح: منوچهر کریمی</div>
+</header>
+<main>
+<div class="card">
+<h3>۱️⃣ انتخاب درس</h3>
+<div class="controls">
+<select id="lesson"></select>
+<button class="btn3" id="toggleText">نمایش متن</button>
+</div>
+<p id="lessonDesc" class="hint"></p>
+<div class="sentence-box" id="lessonText"></div>
+</div>
+<div class="card">
+<h3>۲️⃣ املای صوتی</h3>
+<div class="controls">
+<button class="btn" id="playAll">🔊 خواندن کل املا</button>
+<button class="btn" id="playStep">▶️ خواندن جمله به جمله</button>
+<button class="btn2" id="nextStep">جمله بعدی ⬅</button>
+<button class="btn2" id="repeatBtn">🔁 تکرار</button>
+<button class="btn3" id="stopBtn">⏹ توقف</button>
+<label>سرعت: <input type="range" id="rate" min="0.5" max="1.2" step="0.05" value="0.85"></label>
+</div>
+<div class="sentence-box" id="sentence" style="margin-top:10px"></div>
+</div>
+<div class="card board-wrap">
+<h3 style="color:#fff">۳️⃣ تخته هوشمند + دفتر دانش‌آموز</h3>
+<canvas id="board"></canvas>
+<div class="toolbar">
+<span class="swatch active" data-c="#ffffff" style="background:#fff"></span>
+<span class="swatch" data-c="#ffeb3b" style="background:#ffeb3b"></span>
+<span class="swatch" data-c="#ff9ec6" style="background:#ff9ec6"></span>
+<span class="swatch" data-c="#7ef9ff" style="background:#7ef9ff"></span>
+<span class="swatch" data-c="#9dff9d" style="background:#9dff9d"></span>
+<label style="color:#fff">ضخامت گچ: <input type="range" id="w" min="1" max="10" value="3"></label>
+<button class="btn2" id="chalkBtn">گچ</button>
+<button class="btn2" id="eraser">🧽 پاک‌کن</button>
+<button class="btn2" id="gridBtn">خط‌کشی</button>
+<button class="btn2" id="clear">🧹 پاک کردن تخته</button>
+<button class="btn2" id="save">📷 ذخیره تخته</button>
+</div>
+<h4 style="color:#ffcf4d">✏️ دفتر دانش‌آموز (پایین تخته بنویس — اتومات روی تخته می‌رود)</h4>
+<textarea id="answer" placeholder="اینجا املا را بنویس..."></textarea>
+<div class="controls" style="margin-top:8px">
+<label style="color:#fff"><input type="checkbox" id="autoBoard" checked> فرستادن اتومات نوشته به تخته</label>
+<button class="btn2" id="sendToBoard">⬆️ بفرست روی تخته</button>
+<button class="btn" id="check">✅ تصحیح خودکار + نمره</button>
+</div>
+</div>
+<div class="card">
+<h3>۴️⃣ نتیجه و نمره</h3>
+<div class="score" id="score"></div>
+<div class="result" id="result"></div>
+</div>
+</main>
+<footer>طراح و برنامه‌نویس: <b>منوچهر کریمی</b> • املا‌خوان فارسی پنجم ❤️</footer>
+<script src="lessons.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
