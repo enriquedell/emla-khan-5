@@ -1,0 +1,31 @@
+@font-face{font-display:swap}
+:root{--green:#0f3d2e;--chalk:#fffef5;--gold:#ffcf4d}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Vazirmatn","B Nazanin","IRANSans",Tahoma,sans-serif;background:#f3efe4;color:#222;direction:rtl}
+header{background:linear-gradient(135deg,#0f3d2e,#145843);color:#fff;padding:14px 18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+header img.logo{width:56px;height:56px;border-radius:14px;background:#fff;padding:4px}
+header h1{font-size:22px;margin:0}
+header p{margin:2px 0 0;font-size:13px;opacity:.9}
+.designer{background:var(--gold);color:#3a2c00;font-weight:800;border-radius:999px;padding:6px 14px;font-size:14px;margin-inline-start:auto}
+main{max-width:1100px;margin:0 auto;padding:16px;display:grid;gap:16px}
+.card{background:#fff;border-radius:16px;box-shadow:0 6px 22px rgba(0,0,0,.08);padding:16px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+select,button,input[type=range]{font-family:inherit}
+select{padding:10px;border-radius:10px;border:2px solid #0f3d2e;font-size:15px;min-width:260px;background:#fff}
+button{border:0;border-radius:10px;padding:10px 14px;font-size:15px;font-weight:700;cursor:pointer}
+.btn{background:#0f3d2e;color:#fff}.btn2{background:#ffe9a8;color:#4a3600}.btn3{background:#e8f5ee;color:#0f3d2e;border:2px solid #0f3d2e}
+button:disabled{opacity:.5;cursor:not-allowed}
+.board-wrap{background:#0b2f24;border-radius:16px;padding:12px}
+canvas#board{width:100%;height:380px;background:#123c2f radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.06),transparent 60%);border:6px solid #6b4423;border-radius:10px;cursor:crosshair;touch-action:none}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;align-items:center}
+.swatch{width:32px;height:32px;border-radius:50%;border:3px solid #fff;cursor:pointer}
+.swatch.active{outline:3px solid var(--gold)}
+label{font-size:14px}
+textarea#answer{width:100%;min-height:130px;font-size:19px;line-height:2;padding:12px;border-radius:12px;border:2px solid #0f3d2e;font-family:inherit;direction:rtl}
+.hint{font-size:13px;color:#555}
+.result{line-height:2.2;font-size:18px}
+.ok{background:#d7f5de;border-radius:6px;padding:1px 6px}.bad{background:#ffd6d6;border-radius:6px;padding:1px 6px;text-decoration:line-through}.miss{background:#fff3b0;border-radius:6px;padding:1px 6px}
+.score{font-size:22px;font-weight:900;color:#0f3d2e}
+footer{text-align:center;color:#666;font-size:13px;padding:18px}
+.sentence-box{background:#fffbe8;border:2px dashed #b78d00;border-radius:12px;padding:10px;font-size:18px;line-height:2;min-height:60px}
+@media(max-width:700px){canvas#board{height:300px}header h1{font-size:18px}}
