@@ -1,0 +1,26 @@
+name: Build APK
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build PWA files
+        run: ls -la
+      - name: Install PWABuilder
+        run: npm i -g @pwabuilder/cli
+      - name: Package APK
+        run: |
+          mkdir -p out
+          echo "سایت شما باید روی Pages فعال باشد تا APK ساخته شود"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: emla-khan-5-pwa
+          path: ./
